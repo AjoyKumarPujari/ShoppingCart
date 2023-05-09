@@ -8,7 +8,7 @@ const App = () => {
   return (
   <div>
     {/* <Counter/> */}
-    <div>
+    <div className="bg-slate-900">
       <Navbar/>
     </div>
     <Routes>

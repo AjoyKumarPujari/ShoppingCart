@@ -3,15 +3,15 @@ import { NavLink } from "react-router-dom";
 const Navbar = () => {
   return <div>
     
-  <div className="flex flex-row justify-between"> 
+  <nav className="flex justify-between items-center h-20 max-w-6xl mx-auto"> 
 
     <NavLink to="/">
-      <div>
-      <img src="https://uploads.turbologo.com/uploads/design/preview_image/431581/preview_image20210729-12976-1cljcfe.png"/>
+      <div className="ml-5">
+      <img src="../logo.png" className="h-14"/>
       </div>
     </NavLink>
 
-    <div>
+    <div className="flex items-center font-edium text-slate-100 mr-5 space-x-6">
       <NavLink to="/">
         <p>Home</p>
       </NavLink>
@@ -23,7 +23,7 @@ const Navbar = () => {
       </NavLink>
       
     </div>
-  </div>
+  </nav>
   </div>;
 };
 

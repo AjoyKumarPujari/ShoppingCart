@@ -4,7 +4,7 @@ import Product from "../components/Product";
 
 const Home = () => {
   const API_URL = "https://fakestoreapi.com/products";
-  const {loading, setLoading} = useState(false);
+  const [loading, setLoading] = useState(false);
   const [posts, setPosts] = useState([]);
 
 async function fetchProductData() {
@@ -27,8 +27,7 @@ useEffect(()=>{
 },[])
 
 
-  return 
-  (
+  return (
     <div>
       {
         loading ? <Spinner/> :

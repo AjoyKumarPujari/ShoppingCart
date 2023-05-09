@@ -1,12 +1,13 @@
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import CartItem from "../components/CartItem"
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 
-const Cart = () => {
+const   Cart = () => {
   const {cart} = useSelector((state)=>state);
-  const [totalAmount, setTotalAmount] = useSelector(0);
+  console.log(cart);
+  const [totalAmount, setTotalAmount] = useState(0);
 
   useEffect ( ()=>{
     setTotalAmount( cart.reduce((acc, curr) => acc+curr.price,0 ));
